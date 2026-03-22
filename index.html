@@ -1,65 +1,25 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>PitchMate AI — Tạo Pitch Deck cho Startup Việt Nam</title>
-<meta name="description" content="Công cụ AI tạo Pitch Deck chuyên nghiệp cho sinh viên khởi nghiệp Việt Nam"/>
-<meta property="og:title" content="PitchMate AI — Pitch Deck Generator"/>
-<meta property="og:description" content="Tạo Pitch Deck AI chuyên nghiệp trong vài phút — dự báo tài chính 36 tháng, phân tích đối thủ, xuất PPTX"/>
-<style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html, body { width:100%; height:100%; overflow:hidden; background:#1e2761; }
-  #loader {
-    position:fixed; inset:0; background:#1e2761;
-    display:flex; flex-direction:column;
-    align-items:center; justify-content:center;
-    z-index:10; transition:opacity .4s;
-  }
-  #loader .logo { font-size:40px; margin-bottom:16px; }
-  #loader .title { font-family:Georgia,serif; font-size:22px; color:white; font-weight:700; margin-bottom:6px; }
-  #loader .sub { font-size:13px; color:rgba(255,255,255,.5); margin-bottom:28px; }
-  #loader .bar-wrap { width:200px; height:4px; background:rgba(255,255,255,.15); border-radius:2px; overflow:hidden; }
-  #loader .bar { height:100%; background:#c8401a; border-radius:2px; animation:load 1.8s ease forwards; }
-  @keyframes load { from{width:0} to{width:100%} }
-  #app {
-    width:100%; height:100%;
-    border:none; display:block;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+    <title>PitchMate AI</title>
 </head>
 <body>
-
-<div id="loader">
-  <div class="logo">🚀</div>
-  <div class="title">PitchMate AI</div>
-  <div class="sub">Đang tải ứng dụng...</div>
-  <div class="bar-wrap"><div class="bar"></div></div>
-</div>
-
-<iframe
-  id="app"
-  src="https://script.google.com/macros/s/AKfycbzluRbb4EA7IYS52LCVpsMITk2HiyTvXmDpzRP7zzLqzFhxZcOurOjzBWKhe2lIx8dNhg/exec"
-  allow="clipboard-write; clipboard-read"
-  loading="eager"
-></iframe>
-
-<script>
-  const iframe = document.getElementById('app');
-  const loader = document.getElementById('loader');
-  // Ẩn loader khi iframe load xong
-  iframe.addEventListener('load', function() {
-    setTimeout(function() {
-      loader.style.opacity = '0';
-      setTimeout(function() { loader.style.display = 'none'; }, 400);
-    }, 300);
-  });
-  // Fallback: ẩn loader sau 5 giây dù iframe chưa fire load event
-  setTimeout(function() {
-    loader.style.opacity = '0';
-    setTimeout(function() { loader.style.display = 'none'; }, 400);
-  }, 5000);
-</script>
-
+    <iframe src="https://script.google.com/macros/s/AKfycbzluRbb4EA7IYS52LCVpsMITk2HiyTvXmDpzRP7zzLqzFhxZcOurOjzBWKhe2lIx8dNhg/exec"></iframe>
 </body>
 </html>
