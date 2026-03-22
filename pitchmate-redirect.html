@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>PitchMate AI — Tạo Pitch Deck cho Startup Việt Nam</title>
+<meta name="description" content="Công cụ AI tạo Pitch Deck chuyên nghiệp cho sinh viên khởi nghiệp Việt Nam"/>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(135deg,#1e2761 0%,#1a5fa8 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+  .card{background:white;border-radius:16px;padding:40px 32px;max-width:460px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3);}
+  .logo{width:64px;height:64px;background:#c8401a;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:28px;}
+  h1{font-size:22px;font-weight:700;color:#1e2761;margin-bottom:8px;}
+  p{font-size:14px;color:#6b6560;line-height:1.6;margin-bottom:24px;}
+  .btn{display:block;padding:14px 24px;background:#c8401a;color:white;text-decoration:none;border-radius:8px;font-size:15px;font-weight:600;transition:opacity .2s;margin-bottom:12px;}
+  .btn:hover{opacity:.9;}
+  .btn.secondary{background:#1e2761;}
+  .note{font-size:11px;color:#9e9891;margin-top:16px;line-height:1.5;}
+  .spin{display:inline-block;width:20px;height:20px;border:3px solid rgba(200,64,26,.3);border-top-color:#c8401a;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-right:8px;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  #loading{margin-top:16px;font-size:13px;color:#9e9891;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">🚀</div>
+  <h1>PitchMate AI</h1>
+  <p>Công cụ tạo Pitch Deck chuyên nghiệp cho sinh viên khởi nghiệp Việt Nam — tích hợp AI tạo nội dung, tài chính 36 tháng và phân tích thị trường.</p>
+
+  <a href="https://script.google.com/macros/s/AKfycbzluRbb4EA7IYS52LCVpsMITk2HiyTvXmDpzRP7zzLqzFhxZcOurOjzBWKhe2lIx8dNhg/exec" class="btn" id="mainBtn">
+    🎯 Vào PitchMate AI
+  </a>
+
+  <div id="loading"><span class="spin"></span>Đang chuyển hướng...</div>
+
+  <div class="note">
+    Nếu không tự chuyển hướng, nhấn nút trên.<br>
+    Liên hệ hỗ trợ: <a href="https://t.me/tienla" style="color:#1a5fa8">Telegram @tienla</a> · <a href="https://zalo.me/0913176383" style="color:#1a5fa8">Zalo 0913176383</a>
+  </div>
+</div>
+
+<script>
+  const TARGET = 'https://script.google.com/macros/s/AKfycbzluRbb4EA7IYS52LCVpsMITk2HiyTvXmDpzRP7zzLqzFhxZcOurOjzBWKhe2lIx8dNhg/exec';
+  // Auto redirect sau 1.5 giây
+  setTimeout(function(){ window.location.href = TARGET; }, 1500);
+</script>
+</body>
+</html>
